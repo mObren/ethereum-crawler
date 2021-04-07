@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Ethereum Crawler</title>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="assets/images/ethereum-icon1.png"
+    />
+  </head>
+  <body style="align-content: center">
+    <div id="app">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/images/ethereum-icon1.png"
+              alt=""
+              width="30"
+              height="35"
+              class="d-inline-block align-text-top"
+            />Ethereum
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            style="margin-left: 650px"
+            class="collapse navbar-collapse"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link" id="transactionNav" href="#">Transactions</a>
+
+              <a class="nav-link" id="balanceNav" href="#">Check Balance</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <form id="transactions" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Enter address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            minlength="42"
+            maxlength="42"
+          />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Enter block</label>
+          <input type="number" class="form-control" id="inputBlock" />
+        </div>
+        <div style="margin-top: 10px" class="col-12">
+          <button id="submitInput" type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+        <div id="pagination" class="col hidden">
+          <button
+            style="margin-right: 5px"
+            class="btn btn-outline-primary"
+            id="previousButton"
+          >
+            PREVIOUS
+          </button>
+          <button class="btn btn-outline-primary" id="nextButton">NEXT</button>
+        </div>
+      </form>
+      <div id="transactionsContainer"></div>
+
+      <form id="balances" class="row g-3 hidden">
+        <div class="col-md-6">
+          <label class="form-label">Enter address for Balance</label>
+          <input
+            type="text"
+            class="form-control"
+            id="addressInput"
+            minlength="42"
+            maxlength="42"
+          />
+        </div>
+        <div style="margin-top: 10px" class="col-12">
+          <button id="submitBalances" type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </form>
+      <div id="balanceContainer">
+        <table class="table table-sm table-dark">
+          <div class="table-responsive">
+            <table style="max-width: 500px" class="table align-middle">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <td>Balance amount:</td>
+
+                  <td id="balanceRow"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

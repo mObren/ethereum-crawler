@@ -1,0 +1,20 @@
+.hidden {
+  display: none;
+}
+.table-row {
+  white-space: nowrap;
+
+  overflow: hidden;
+  max-width: 200px;
+  height: 30px;
+  text-overflow: ellipsis;
+  font-size: small;
+}
+p {
+  padding: 0px;
+}
+
+#app {
+  max-width: 90%;
+  margin: auto;
+}

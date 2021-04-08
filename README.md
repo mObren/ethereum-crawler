@@ -8,4 +8,4 @@ npm install
 
 Start project by running:
 
-npm start
+`<npm start>`

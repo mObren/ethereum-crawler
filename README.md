@@ -1,4 +1,4 @@
-Application which displays transaction and balance information on Ethereum wallets.
+## Application which displays transaction and balance information on Ethereum wallets.
 
 Installation :
 To run this application, you sholud have NodeJS(v12.14.0 or newer) installed.
